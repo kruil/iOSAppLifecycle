@@ -2,17 +2,17 @@
 Application lifecycle investigation. The general idea was to log maximum number of events to console to clear understand app lifecycle.
 # Actors and Actresses
 🤴🏿- ViewController <br>
-🐯🐯 - ViewController.view 
-🐸🐸🐸 - View Controller.view.view 
-🦊🦊🦊🦊 - View Controller.view.view.view 
-🌅 - view.layer 
+🐯🐯 - ViewController.view <br>
+🐸🐸🐸 - View Controller.view.view <br>
+🦊🦊🦊🦊 - View Controller.view.view.view <br>
+🌅 - view.layer <br>
 # Current output is: 
-didFinishLaunchingWithOptions
-
-🤴🏿 loadView
-🐯🐯 - init(frame:)
-
-🤴🏿 viewDidLoad
+didFinishLaunchingWithOptions<br>
+<br>
+🤴🏿 loadView<br>
+🐯🐯 - init(frame:)<br>
+<br>
+🤴🏿 viewDidLoad<br>
 🐸🐸🐸 - init(frame:)
 🦊🦊🦊🦊 - init(frame:)
 
