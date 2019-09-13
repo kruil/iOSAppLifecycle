@@ -1,5 +1,6 @@
 # iOSAppLifecycle
-Application lifecycle investigation. The general idea was to log maximum number of events to console to clear understand app lifecycle.
+Application lifecycle investigation. The general idea was to log maximum number of events to console to clear understand app lifecycle. If you now how to get more info please open an issue.
+<br>
 # Actors and Actresses
 🤴🏿- ViewController <br>
 🐯🐯 - ViewController.view <br>
