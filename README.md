@@ -1,13 +1,13 @@
 # iOSAppLifecycle
 This is application lifecycle investigation. The general idea is to log max number of events to console to clear understand app launching process. If you now how to log more events please open an issue.
 <br>
-# Actors and Actresses
+## Actors and Actresses
 🤴🏿- ViewController <br>
 🐯🐯 - ViewController.view <br>
 🐸🐸🐸 - View Controller.view.view <br>
 🦊🦊🦊🦊 - View Controller.view.view.view <br>
 🌅 - view.layer <br>
-# Log: 
+## Log: 
 didFinishLaunchingWithOptions<br>
 <br>
 🤴🏿 loadView<br>
