@@ -44,5 +44,5 @@ didFinishLaunchingWithOptions<br>
 🦊🦊🦊🦊 - layerWillDraw<br>
 🦊🦊🦊🦊🌅 - draw<br>
 <br>
-🤴🏿 viewDidAppear<br>
+🤴🏿 viewDidAppear<br><br>
 applicationDidBecomeActive
