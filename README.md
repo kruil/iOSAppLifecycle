@@ -13,35 +13,35 @@ didFinishLaunchingWithOptions<br>
 🐯🐯 - init(frame:)<br>
 <br>
 🤴🏿 viewDidLoad<br>
-🐸🐸🐸 - init(frame:)
-🦊🦊🦊🦊 - init(frame:)
-
-🤴🏿 viewWillAppear
-🐯🐯 - layoutMarginsDidChange
-🤴🏿 viewLayoutMarginsDidChange
-🐯🐯 - safeAreaInsetsDidChange
-🤴🏿 viewSafeAreaInsetsDidChange
-🐯🐯 - layoutMarginsDidChange
-🤴🏿 viewLayoutMarginsDidChange
-🐯🐯 - safeAreaInsetsDidChange
-🤴🏿 viewSafeAreaInsetsDidChange
-
-🤴🏿 viewWillLayoutSubviews
-🦊🦊🦊🦊 - updateConstraints
-🐸🐸🐸 - updateConstraints
-🐯🐯 - updateConstraints
-🐸🐸🐸 - layoutMarginsDidChange
-🐸🐸🐸 - safeAreaInsetsDidChange
-
-🤴🏿 viewDidLayoutSubviews
-🦊🦊🦊🦊 - layoutMarginsDidChange
-🦊🦊🦊🦊 - safeAreaInsetsDidChange
-🐯🐯 - layerWillDraw
-🐯🐯🌅 - draw
-🐸🐸🐸 - layerWillDraw
-🐸🐸🐸🌅 - draw
-🦊🦊🦊🦊 - layerWillDraw
-🦊🦊🦊🦊🌅 - draw
-
-🤴🏿 viewDidAppear
+🐸🐸🐸 - init(frame:)<br>
+🦊🦊🦊🦊 - init(frame:)<br>
+<br>
+🤴🏿 viewWillAppear<br>
+🐯🐯 - layoutMarginsDidChange<br>
+🤴🏿 viewLayoutMarginsDidChange<br>
+🐯🐯 - safeAreaInsetsDidChange<br>
+🤴🏿 viewSafeAreaInsetsDidChange<br>
+🐯🐯 - layoutMarginsDidChange<br>
+🤴🏿 viewLayoutMarginsDidChange<br>
+🐯🐯 - safeAreaInsetsDidChange<br>
+🤴🏿 viewSafeAreaInsetsDidChange<br>
+<br>
+🤴🏿 viewWillLayoutSubviews<br>
+🦊🦊🦊🦊 - updateConstraints<br>
+🐸🐸🐸 - updateConstraints<br>
+🐯🐯 - updateConstraints<br>
+🐸🐸🐸 - layoutMarginsDidChange<br>
+🐸🐸🐸 - safeAreaInsetsDidChange<br>
+<br>
+🤴🏿 viewDidLayoutSubviews<br>
+🦊🦊🦊🦊 - layoutMarginsDidChange<br>
+🦊🦊🦊🦊 - safeAreaInsetsDidChange<br>
+🐯🐯 - layerWillDraw<br>
+🐯🐯🌅 - draw<br>
+🐸🐸🐸 - layerWillDraw<br>
+🐸🐸🐸🌅 - draw<br>
+🦊🦊🦊🦊 - layerWillDraw<br>
+🦊🦊🦊🦊🌅 - draw<br>
+<br>
+🤴🏿 viewDidAppear<br>
 applicationDidBecomeActive
