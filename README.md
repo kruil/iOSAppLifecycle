@@ -1,11 +1,11 @@
 # iOSAppLifecycle
 Application lifecycle investigation. The general idea was to log maximum number of events to console to clear understand app lifecycle.
 # Actors and Actresses
- 🤴🏿- ViewController 
- 🐯🐯 - ViewController.view 
- 🐸🐸🐸 - View Controller.view.view 
- 🦊🦊🦊🦊 - View Controller.view.view.view 
- 🌅 - view.layer 
+🤴🏿- ViewController <br>
+🐯🐯 - ViewController.view 
+🐸🐸🐸 - View Controller.view.view 
+🦊🦊🦊🦊 - View Controller.view.view.view 
+🌅 - view.layer 
 # Current output is: 
 didFinishLaunchingWithOptions
 
