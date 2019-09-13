@@ -7,7 +7,7 @@ This is application lifecycle investigation. The general idea is to log max numb
 🐸🐸🐸 - View Controller.view.view <br>
 🦊🦊🦊🦊 - View Controller.view.view.view <br>
 🌅 - view.layer <br>
-# Current output is: 
+# Log: 
 didFinishLaunchingWithOptions<br>
 <br>
 🤴🏿 loadView<br>
