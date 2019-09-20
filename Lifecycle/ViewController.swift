@@ -22,21 +22,27 @@ class ViewController: UIViewController {
         print("\n\(name) viewDidLoad")
         super.viewDidLoad()
 
-        let myView = MyView(name: "🐸🐸🐸", frame: CGRect(x: 0,y: 0,width: 20,height: 20))
+        let myView = MyView(name: "🐸🐸🐸", frame: CGRect(x: 0,y: 0,width: 100,height: 100))
         myView.backgroundColor = .green
         view.addSubview(myView)
 
-        let redView = MyView(name: "🦊🦊🦊🦊", frame: CGRect(x: 5,y: 5,width: 80,height: 80))
+        let redView = MyView(name: "🦊🦊🦊🦊", frame: CGRect(x: 5,y: 5,width: 50,height: 50))
         redView.backgroundColor = .red
         myView.addSubview(redView)
-
-        // view.setNeedsUpdateConstraints()
-        redView.setNeedsUpdateConstraints()
     }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        print("\n📱 Device rotation --------------------\n")
+        super.viewWillTransition(to: size, with: coordinator)
+    }
+
+    
 
     override func viewWillLayoutSubviews() {
         print("\n\(name) viewWillLayoutSubviews")
         super.viewWillLayoutSubviews()
+        let screenBounds = UIScreen.main.bounds
+        view.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: screenBounds.height / 2)
     }
 
     override func viewDidLayoutSubviews() {
@@ -47,7 +53,6 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         print("\n\(name) viewWillAppear")
         super.viewWillAppear(animated)
-        view.frame = CGRect(x: 20, y: 20, width: 300, height: 200)
     }
 
     override func viewDidAppear(_ animated: Bool) {

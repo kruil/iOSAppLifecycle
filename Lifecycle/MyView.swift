@@ -12,7 +12,6 @@ import UIKit
 
 class MyView: UIView {
     var name = "view"
-    var layerDelegate: LayerDelegate!
 
     convenience init(name: String, frame: CGRect) {
         print("\(name) - init(frame:)")
@@ -30,15 +29,13 @@ class MyView: UIView {
     }
 
     override func draw(_ rect: CGRect) {
-        print("\(name) - draw")
+        print("\(name) - draw(rect:)")
         super.draw(rect)
     }
 
     override func layerWillDraw(_ layer: CALayer) {
         print("\(name) - layerWillDraw")
         super.layerWillDraw(layer)
-        layerDelegate = LayerDelegate(viewName: name)
-        layer.delegate = layerDelegate
     }
 
     override func layoutMarginsDidChange() {
@@ -53,5 +50,26 @@ class MyView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func layoutSubviews() {
+        print("\(name) - layoutSubviews")
+        super.layoutSubviews()
+    }
+
+    // MARK: - Layer delegates methods
+
+    override func draw(_ layer: CALayer, in ctx: CGContext) {
+        print("\(name)🌅 - draw")
+        super.draw(layer, in: ctx)
+    }
+
+    override func layoutSublayers(of layer: CALayer) {
+        print("\(name)🌅 - layoutSublayers")
+        super.layoutSublayers(of: layer)
+    }
+
+    override func display(_ layer: CALayer) {
+        print("\(name)🌅 - display")
     }
 }
