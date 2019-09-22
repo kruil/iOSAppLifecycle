@@ -8,6 +8,16 @@
 
 import UIKit
 
+func print(_ text: String) {
+    let printForGitHub = true
+    if printForGitHub {
+        // console output to GitHub Readme.txt
+        print(text, terminator: "<br>\n")
+    } else {
+        print(text, terminator: "\n")
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
