@@ -3,7 +3,7 @@ This is application lifecycle investigation. The general idea is to log max numb
 <br><br>
 ## Actors and Actresses
 📱- Device <br>
-🔲- Window
+🔲- Window <br>
 🤴🏿- ViewController <br>
 🐯🐯 - ViewController.view <br>
 🐸🐸🐸 - View Controller.view.view <br>
@@ -60,9 +60,9 @@ This is application lifecycle investigation. The general idea is to log max numb
 🔲 - display<br>
 
 🤴🏿 viewDidAppear<br>
-
-📱 Device rotation --------------------
 <br>
+📱 Device rotation --------------------
+<br><br>
 🐯🐯 - frame changed: (0.0, 0.0, 896.0, 414.0)<br>
 🐯🐯 - setNeedsLayout<br>
 🔲🌅 - layoutSublayers<br>
