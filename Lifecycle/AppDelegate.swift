@@ -8,16 +8,6 @@
 
 import UIKit
 
-func print(_ text: String) {
-    let printForGitHub = true
-    if printForGitHub {
-        // console output to GitHub Readme.txt
-        print(text, terminator: "<br>\n")
-    } else {
-        print(text, terminator: "\n")
-    }
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -25,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print("⭐️ - didFinishLaunchingWithOptions")
+        Logger.shared.log("⭐️ - didFinishLaunchingWithOptions")
         return true
     }
 
@@ -40,19 +30,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        print("⭐️ - applicationWillEnterForeground")
+        Logger.shared.log("⭐️ - applicationWillEnterForeground")
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        print("⭐️ - applicationDidBecomeActive")
+        Logger.shared.log("⭐️ - applicationDidBecomeActive")
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
+extension UIWindow {
+    var name: String {
+        return "🔲"
+    }
+
+    open override func layoutSubviews() {
+        Logger.shared.log("\(name) - layoutSubviews")
+        super.layoutSubviews()
+    }
+
+    open override func updateConstraints() {
+        Logger.shared.log("\(name) - updateConstraints")
+        super.updateConstraints()
+    }
+
+    open override func draw(_ rect: CGRect) {
+        Logger.shared.log("\(name) - draw")
+        super.draw(rect)
+    }
+
+    open override func display(_ layer: CALayer) {
+        Logger.shared.log("\(name) - display")
+    }
+
+    open override func layoutSublayers(of layer: CALayer) {
+        Logger.shared.log("\(name)🌅 - layoutSublayers")
+        super.layoutSublayers(of: layer)
+    }
+}

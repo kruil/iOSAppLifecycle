@@ -8,18 +8,25 @@
 
 import UIKit
 
+class ChildViewController : UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+    }
+}
+
 class ViewController: UIViewController {
 
     let name = "🤴🏿"
 
     override func loadView() {
-        print("\n\(name) loadView")
+        Logger.shared.log("\n\(name) loadView")
         view = MyView(name: "🐯🐯", frame: CGRect(x: 0,y: 0,width: 100,height: 100))
         view.backgroundColor = .yellow
     }
 
     override func viewDidLoad() {
-        print("\n\(name) viewDidLoad")
+        Logger.shared.log("\n\(name) viewDidLoad")
         super.viewDidLoad()
 
         let myView = MyView(name: "🐸🐸🐸", frame: CGRect(x: 0,y: 0,width: 100,height: 100))
@@ -32,46 +39,45 @@ class ViewController: UIViewController {
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        print("\n📱 Device rotation --------------------\n")
+        Logger.shared.log("\n📱 Device rotation --------------------\n")
         super.viewWillTransition(to: size, with: coordinator)
     }
 
-    
-
     override func viewWillLayoutSubviews() {
-        print("\n\(name) viewWillLayoutSubviews")
+        Logger.shared.log("\n\(name) viewWillLayoutSubviews")
         super.viewWillLayoutSubviews()
-        let screenBounds = UIScreen.main.bounds
-        view.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: screenBounds.height / 2)
+//        let screenBounds = UIScreen.main.bounds
+//        view.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: screenBounds.height / 2)
     }
 
     override func viewDidLayoutSubviews() {
-        print("\n\(name) viewDidLayoutSubviews")
+        Logger.shared.log("\n\(name) viewDidLayoutSubviews")
         super.viewDidLayoutSubviews()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("\n\(name) viewWillAppear")
+        Logger.shared.log("\n\(name) viewWillAppear")
         super.viewWillAppear(animated)
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        print("\n\(name) viewDidAppear")
+        Logger.shared.log("\n\(name) viewDidAppear")
         super.viewDidAppear(animated)
     }
 
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        print("\(name) didUpdateFocus")
+        Logger.shared.log("\(name) didUpdateFocus")
         super.didUpdateFocus(in: context, with: coordinator)
     }
 
     override func viewLayoutMarginsDidChange() {
-        print("\(name) viewLayoutMarginsDidChange")
+        Logger.shared.log("\(name) viewLayoutMarginsDidChange")
         super.viewLayoutMarginsDidChange()
     }
 
     override func viewSafeAreaInsetsDidChange() {
-        print("\(name) viewSafeAreaInsetsDidChange")
+        Logger.shared.log("\(name) viewSafeAreaInsetsDidChange")
         super.viewSafeAreaInsetsDidChange()
     }
 }
+

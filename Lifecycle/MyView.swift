@@ -11,10 +11,18 @@ import UIKit
 
 
 class MyView: UIView {
-    var name = "view"
+    var name = ""
+
+    override var frame: CGRect {
+        didSet {
+            if !name.isEmpty {
+                Logger.shared.log("\(name) - frame changed: \(frame)")
+            }
+        }
+    }
 
     convenience init(name: String, frame: CGRect) {
-        print("\(name) - init(frame:)")
+        Logger.shared.log("\(name) - init(frame: \(frame)")
         self.init(frame: frame)
         self.name = name
     }
@@ -24,27 +32,27 @@ class MyView: UIView {
     }
 
     override func updateConstraints() {
-        print("\(name) - updateConstraints")
+        Logger.shared.log("\(name) - updateConstraints")
         super.updateConstraints()
     }
 
     override func draw(_ rect: CGRect) {
-        print("\(name) - draw(rect:)")
+        Logger.shared.log("\(name) - draw(rect:)")
         super.draw(rect)
     }
 
     override func layerWillDraw(_ layer: CALayer) {
-        print("\(name) - layerWillDraw")
+        Logger.shared.log("\(name) - layerWillDraw")
         super.layerWillDraw(layer)
     }
 
     override func layoutMarginsDidChange() {
-        print("\(name) - layoutMarginsDidChange")
+        Logger.shared.log("\(name) - layoutMarginsDidChange")
         super.layoutMarginsDidChange()
     }
 
     override func safeAreaInsetsDidChange() {
-        print("\(name) - safeAreaInsetsDidChange")
+        Logger.shared.log("\(name) - safeAreaInsetsDidChange")
         super.safeAreaInsetsDidChange()
     }
 
@@ -53,23 +61,28 @@ class MyView: UIView {
     }
 
     override func layoutSubviews() {
-        print("\(name) - layoutSubviews")
+        Logger.shared.log("\(name) - layoutSubviews")
         super.layoutSubviews()
+    }
+
+    override func setNeedsLayout() {
+        Logger.shared.log("\(name) - setNeedsLayout")
+        super.setNeedsLayout()
     }
 
     // MARK: - Layer delegates methods
 
     override func draw(_ layer: CALayer, in ctx: CGContext) {
-        print("\(name)🌅 - draw")
+        Logger.shared.log("\(name)🌅 - draw")
         super.draw(layer, in: ctx)
     }
 
     override func layoutSublayers(of layer: CALayer) {
-        print("\(name)🌅 - layoutSublayers")
+        Logger.shared.log("\(name)🌅 - layoutSublayers")
         super.layoutSublayers(of: layer)
     }
 
     override func display(_ layer: CALayer) {
-        print("\(name)🌅 - display")
+        Logger.shared.log("\(name)🌅 - display")
     }
 }
